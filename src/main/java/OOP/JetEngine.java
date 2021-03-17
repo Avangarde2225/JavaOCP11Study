@@ -6,13 +6,17 @@ public class JetEngine {
     int maxFanSpeed;
     int thrust;
 
+    JetEngine(){System.out.println("no arg");}
+
     JetEngine(String model){
-        this.model = model;
+        this();
+        System.out.println("Model");
     }
 
     JetEngine(String model, int maxFanSpeed){
         this(model);
         this.maxFanSpeed = maxFanSpeed;
+        System.out.println("model, maxFanSpeed");
     }
 
     void start(){ }
@@ -20,8 +24,14 @@ public class JetEngine {
 }
 
  class methodCall {
-    JetEngine trent = new JetEngine("Trent 800", 6000);
+     public static void main(String[] args) {
 
+
+         JetEngine trent = new JetEngine("Trent 800", 6000);
+         JetEngine trent800 = trent;
+         new JetEngine("Trent 8000", 5000);
+
+     }
 }
 
 
