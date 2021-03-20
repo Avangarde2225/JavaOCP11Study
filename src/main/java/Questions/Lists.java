@@ -14,9 +14,9 @@ public class Lists {
             list1.add(s);
             set1.add(s);
         }
-        System.out.println(set1.size()+ ""+list1.size() +"");
+        System.out.println(set1.size()+ " "+list1.size() +" ");
         HashSet set2 = new HashSet(list1);
         LinkedList list2 = new LinkedList(set1);
-        System.out.println(set2.size()+""+ list2.size());
+        System.out.println(set2.size()+" "+ list2.size()+" ");
     }
 }
