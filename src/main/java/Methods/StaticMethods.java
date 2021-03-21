@@ -1,29 +1,19 @@
 package Methods;
 
 public class StaticMethods {
-    /*
-    Static Fiels/Class Variables
-    Fields that are associated with the class. Every instance of a class shares a class variable
 
-     */
+    static final int AVG_LITERS_PER_SEC = 4;
 
-    String serialNumber;
-    public static int currentMode1Nb;
-
-    StaticMethods(){
-        currentMode1Nb++;
-
-        this.serialNumber = String.format("%08d", currentMode1Nb);
+    public static int calculateNeed(int duratinMin){
+        int durationInSec = duratinMin *60;
+        return AVG_LITERS_PER_SEC * durationInSec;
     }
 
     public static void main(String[] args) {
-        StaticMethods sm = new StaticMethods();
-        StaticMethods sm2 = new StaticMethods();
+        int twoHourFlight = 120;
+        int quantity = calculateNeed(twoHourFlight);
 
-        System.out.println(sm.serialNumber); // instance field
-        System.out.println(sm2.serialNumber);
-
-        System.out.println(StaticMethods.currentMode1Nb);
+        System.out.println(quantity);
     }
 
 }
