@@ -15,8 +15,9 @@ public class Aircraft {
     }
 
     public void land(){
-
+        System.out.println("Aircraft Landing");
     }
+    public void takeOff(){}
 
     public static void main(String[] args) {
         Aircraft a = new Aircraft();
