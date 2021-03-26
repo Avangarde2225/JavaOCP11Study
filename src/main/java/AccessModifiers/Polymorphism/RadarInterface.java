@@ -19,6 +19,23 @@ Create abstract members that are not
 public
  */
 
+import Methods.RadarTraget;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public interface RadarInterface {
     List<RadarTarget> readData();
+}
+class Main {
+    public static void main(String[] args) {
+
+
+        List<RadarInterface> radars = List.of(
+                new XmlRadar(),
+                new BinaryRadar()
+        );
+        List<RadarTraget> combinedData = new ArrayList<>();
+        radars.forEach(r -> combinedData.addAll(r.readData()));
+    }
 }
