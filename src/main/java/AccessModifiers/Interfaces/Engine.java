@@ -19,10 +19,15 @@ Interfaces can also contain constants
 Fields defined in interfaces are public, static and final by default
 
  */
+    int MIN_TEMP = -50;
+
     void start();
     void stop();
     default String healthCheck(){
         return "OK";
+    }
+    static boolean canStart(int outsideTemp){
+        return outsideTemp > MIN_TEMP;
     }
 
 }
@@ -39,7 +44,10 @@ class TurboProp implements Engine {
 
     public static void main(String[] args) {
         Engine e = new TurboProp();
-        e.healthCheck();
+        System.out.println(e.healthCheck());
+
+        boolean canStart = Engine.canStart(-30);
+        System.out.println(canStart);
     }
 
 }
