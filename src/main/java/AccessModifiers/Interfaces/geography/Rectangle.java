@@ -11,13 +11,13 @@ public class Rectangle {
         }
         this.coordinates = List.of(c1, c2, c3, c4);
     }
-    public boolean containsCoordinate(Coordinate c){
-
-        int maxX = coordinates.stream().mapToInt(Coordinate :: getX).max().getAsInt();
-        int minX = coordinates.stream().mapToInt(Coordinate :: getX).min().getAsInt();
-        int maxY = coordinates.stream().mapToInt(Coordinate :: getY).max().getAsInt();
-        int minXY= coordinates.stream().mapToInt(Coordinate :: getY).min().getAsInt();
-
-        return c.getX() >=minX && c.getX() <= maxX && c.getY() >= minY && c.getY()<=maxY;
-    }
+//    public boolean containsCoordinate(Coordinate c){
+//
+//        int maxX = coordinates.stream().mapToInt(Coordinate :: getX).max().getAsInt();
+//        int minX = coordinates.stream().mapToInt(Coordinate :: getX).min().getAsInt();
+//        int maxY = coordinates.stream().mapToInt(Coordinate :: getY).max().getAsInt();
+//        int minXY= coordinates.stream().mapToInt(Coordinate :: getY).min().getAsInt();
+//
+//        return c.getX() >=minX && c.getX() <= maxX && c.getY() >= minY && c.getY()<=maxY;
+//    }
 }

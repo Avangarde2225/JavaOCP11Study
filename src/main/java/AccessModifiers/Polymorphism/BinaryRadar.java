@@ -1,9 +1,9 @@
 package AccessModifiers.Polymorphism;
 
-public class BinaryRadar implements RadarInterface{
+public class BinaryRadar {
 
-    @Override
-    public List<RadarTarget> readData() {
-        return null;
+//    @Override
+//    public List<RadarTarget> readData() {
+//        return null;
     }
-}
+

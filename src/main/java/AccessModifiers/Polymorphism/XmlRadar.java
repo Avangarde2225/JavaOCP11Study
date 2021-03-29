@@ -1,9 +1,9 @@
 package AccessModifiers.Polymorphism;
 
-public class XmlRadar implements RadarInterface{
+public class XmlRadar  {
 
-    @Override
-    public List<RadarTarget> readData() {
-        return null;
-    }
+//    @Override
+//    public List<RadarTarget> readData() {
+//        return null;
+//    }
 }

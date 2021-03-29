@@ -3,7 +3,7 @@ package AccessModifiers.Interfaces.airspace;
 import AccessModifiers.Interfaces.geography.Coordinate;
 import AccessModifiers.Interfaces.geography.Rectangle;
 
-public class EnRouteSector implements AirSpace {
+public class EnRouteSector {
     private int lowerAltitudeFL;
     private int upperAltitudeFL;
     private Rectangle shape;
@@ -15,14 +15,14 @@ public class EnRouteSector implements AirSpace {
     }
 
 
-    @Override
-    public boolean isInSector(Coordinate x, int attitude) {
-        if (attitude > this.upperAltitudeFL) {
-            return false;
-        }
-        if (attitude < this.lowerAltitudeFL) {
-            return false;
-        }
-        return shape.containsCoordinate(x);
-    }
+//    @Override
+//    public boolean isInSector(Coordinate x, int attitude) {
+//        if (attitude > this.upperAltitudeFL) {
+//            return false;
+//        }
+//        if (attitude < this.lowerAltitudeFL) {
+//            return false;
+//        }
+//       // return shape.containsCoordinate(x);
+//    }
 }
